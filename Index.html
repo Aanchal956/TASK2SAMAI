@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="quiz-container">
+
+    <!-- Start Screen -->
+    <div class="screen" id="startScreen">
+      <h1>General Knowledge Quiz</h1>
+      <p class="info-text">10 questions &bull; 15 seconds per question &bull; Test your knowledge!</p>
+      <button id="startBtn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="screen hidden" id="quizScreen">
+      <div class="quiz-header">
+        <span id="questionCounter">Question 1 / 10</span>
+        <span class="timer" id="timer">15s</span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <h2 id="questionText">Question text goes here</h2>
+
+      <div class="options" id="optionsContainer">
+        <!-- Options injected by JS -->
+      </div>
+
+      <button id="nextBtn" disabled>Next Question</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="screen hidden" id="resultScreen">
+      <h1>Quiz Completed!</h1>
+      <p class="score-text">Your Score: <span id="finalScore">0</span> / 10</p>
+      <p class="score-message" id="scoreMessage"></p>
+
+      <h3>Answer Review</h3>
+      <div class="review-list" id="reviewList">
+        <!-- Review items injected by JS -->
+      </div>
+
+      <button id="restartBtn">Restart Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
